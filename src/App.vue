@@ -13,8 +13,6 @@ $body-color: #EEE;
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 #app {
-  max-height: 100vh;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   user-select: none;

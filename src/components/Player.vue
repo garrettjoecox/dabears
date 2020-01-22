@@ -10,6 +10,8 @@
 .player {
   width: 100%;
   background: #111;
+  position: sticky;
+  bottom: 0;
 }
 </style>
 
