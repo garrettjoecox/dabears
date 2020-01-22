@@ -8,7 +8,7 @@
           <div class="mt-2">{{track.tags.join(', ')}}</div>
           <div class="text-muted">{{new Date(track.date).getFullYear()}} &#8226; {{track.tracklist.length}} songs, 46 min</div>
           <div class="actions mt-3">
-            <button class="btn btn-success rounded-pill text-uppercase px-5">Play</button>
+            <button @click="setCurrentTrack(track.id)" class="btn btn-success rounded-pill text-uppercase px-5">Play</button>
           </div>
         </div>
       </div>
@@ -71,8 +71,13 @@
 </style>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
   name: 'track-details',
   props: ['track'],
+  methods: {
+    ...mapMutations(['setCurrentTrack']),
+  },
 };
 </script>

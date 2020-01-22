@@ -1,6 +1,8 @@
 <template>
-  <div class="player p-4">
-    <span>Player</span>
+  <div class="player d-flex align-items-center">
+    <audio class="player-ref flex-fill" controls preload="none" controlsList="nodownload" ref="player">
+      <source v-if="currentTrack" :src="currentTrack.source" type="audio/mp3"> Your browser does not support the audio element.
+    </audio>
   </div>
 </template>
 
@@ -10,3 +12,17 @@
   background: #111;
 }
 </style>
+
+<script>
+import { mapState } from 'vuex';
+
+export default {
+  mounted() {
+    this.$store.commit('setPlayer', this.$refs.player);
+  },
+
+  computed: {
+    ...mapState(['currentTrack']),
+  },
+};
+</script>
