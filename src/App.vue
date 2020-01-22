@@ -19,7 +19,6 @@ $body-color: #EEE;
 }
 #view {
   flex: 1;
-  overflow: scroll;
 }
 </style>
 
