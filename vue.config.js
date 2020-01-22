@@ -10,4 +10,5 @@ module.exports = {
     // swSrc: 'dev/sw.js',
     // },
   },
+  publicPath: process.env.NODE_ENV === 'production' ? '/dabears' : '/',
 };

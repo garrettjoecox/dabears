@@ -2,7 +2,7 @@
   <div class="home">
     <div class="track-list d-flex flex-wrap justify-content-center">
       <div v-for="track in tracks" :key="track.origin" class="track m-3">
-        <router-link :to="`/${track.id}`" class="track-art d-flex" :style="{backgroundImage: `url(${track.art})`}">
+        <router-link :to="`/${track.id}`" class="track-art d-flex" :style="{backgroundImage: `url(${require('../assets/art/' + track.id + '.jpg')})`}">
           <div class="track-overlay flex-fill d-flex align-items-center justify-content-center">
             <div class="play-button d-flex align-items-center justify-content-center">
               <font-awesome-icon icon="play" color="#FFFFFF" />
