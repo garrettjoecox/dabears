@@ -2,7 +2,7 @@
   <div class="track-details">
     <div class="container">
       <div class="header d-flex">
-        <div class="art" :style="{backgroundImage: `url(${track.art})`}" />
+        <div class="art" :style="{backgroundImage: `url(${require('../assets/art/' + track.id + '.jpg')})`}" />
         <div class="info d-flex flex-column justify-content-end px-4">
           <h1 class="font-weight-bold m-0">{{track.title}}</h1>
           <div class="mt-2">{{track.tags.join(', ')}}</div>
