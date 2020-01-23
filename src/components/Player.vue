@@ -9,9 +9,13 @@
 <style lang="scss">
 .player {
   width: 100%;
+  max-width: 100vw;
   background: #111;
   position: sticky;
   bottom: 0;
+}
+.player-ref {
+  max-width: 100vw;
 }
 </style>
 
