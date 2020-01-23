@@ -1,7 +1,7 @@
 <template>
   <div class="player d-flex align-items-center">
     <audio class="player-ref flex-fill" controls preload="none" controlsList="nodownload" ref="player">
-      <source v-if="currentTrack" :src="currentTrack.source" type="audio/mp3"> Your browser does not support the audio element.
+      <source v-if="currentTrack" :src="`https://dabears.s3.amazonaws.com/${currentTrack.id}.mp3`" type="audio/mp3"> Your browser does not support the audio element.
     </audio>
   </div>
 </template>
