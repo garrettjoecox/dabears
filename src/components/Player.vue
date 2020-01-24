@@ -11,7 +11,7 @@
   width: 100%;
   max-width: 100vw;
   background: #111;
-  position: sticky;
+  position: fixed;
   bottom: 0;
 }
 .player-ref {

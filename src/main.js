@@ -2,13 +2,13 @@ import Vue from 'vue';
 
 import './registerServiceWorker';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faPlay, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faClock, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import store from './store';
 import router from './router';
 import App from './App.vue';
 
-library.add(faPlay, faClock);
+library.add(faPlay, faClock, faChevronLeft);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 

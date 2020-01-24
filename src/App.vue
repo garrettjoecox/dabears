@@ -12,11 +12,16 @@ $body-color: #EEE;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+html, body {
+  height: 100%;
+  user-select: none;
+}
+
 #app {
   display: flex;
   flex-direction: column;
-  user-select: none;
 }
+
 #view {
   flex: 1;
 }

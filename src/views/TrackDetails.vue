@@ -1,9 +1,12 @@
 <template>
   <div class="track-details">
     <div class="container">
-      <div class="header d-flex">
+      <a @click="$router.push({ name: 'home' })" class="back-button d-inline-block py-3">
+        <font-awesome-icon icon="chevron-left" color="#FFFFFF" />
+      </a>
+      <div class="header d-flex flex-wrap justify-content-center justify-content-md-start">
         <div class="art" :style="{backgroundImage: `url(${require('../assets/art/' + track.id + '.jpg')})`}" />
-        <div class="info d-flex flex-column justify-content-end px-4">
+        <div class="info d-flex flex-column justify-content-end align-items-center align-items-md-start px-4">
           <h1 class="font-weight-bold m-0">{{track.title}}</h1>
           <div class="mt-2">{{track.tags.join(', ')}}</div>
           <div class="text-muted">{{new Date(track.date).getFullYear()}} &#8226; {{track.tracklist.length}} songs, 46 min</div>
@@ -21,7 +24,7 @@
           </tr>
           <tr v-for="song in track.tracklist" :key="song.title">
             <td v-html="song.title"/>
-            <td v-html="song.artist"/>
+            <td class="hide-overflow" v-html="song.artist"/>
             <td class="text-right">3:40</td>
           </tr>
         </table>
@@ -32,12 +35,19 @@
 
 <style lang="scss">
 .track-details {
+  padding-bottom: 3rem;
+
+  .back-button {
+    font-size: 1.3rem;
+  }
+
   .header {
     .art {
       width: 350px;
       height: 273px;
-      background: #111;
-      background-size: contain;
+      background-color: #111;
+      background-size: cover;
+      background-position: center;
     }
     .info {
 
@@ -65,6 +75,13 @@
 
     td {
       border-color: #222;
+    }
+
+    .hide-overflow {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 25vw;
     }
   }
 }
