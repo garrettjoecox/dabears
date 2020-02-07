@@ -1,7 +1,7 @@
 <template>
   <div class="track-details">
     <div class="container">
-      <a @click="$router.push({ name: 'home' })" class="back-button d-inline-block py-3">
+      <a @click="$router.push({ name: 'home' })" class="back-button d-inline-block p-3">
         <font-awesome-icon icon="chevron-left" color="#FFFFFF" />
       </a>
       <div class="header d-flex flex-wrap justify-content-center justify-content-md-start">
@@ -39,6 +39,8 @@
 
   .back-button {
     font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: -1rem;
   }
 
   .header {
