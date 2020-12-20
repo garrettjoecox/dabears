@@ -17,7 +17,7 @@ type HomeProps = {
 
 export default function Home({ tracks }: HomeProps) {
   return (
-    <SimpleGrid columns={[1, 2, 3, 4, 5]} spacing="8" p="8">
+    <SimpleGrid minChildWidth="240px" spacing="8" p="8" justifyItems="center">
       {tracks.map((track) => (
         <Box key={track.id}>
           <Link href={`/${track.id}`}>

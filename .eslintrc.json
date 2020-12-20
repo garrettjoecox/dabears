@@ -27,6 +27,7 @@
         "specialLink": ["href"],
         "aspects": ["invalidHref", "preferButton"]
       }
-    ]
+    ],
+    "react/prop-types": ["error", { "ignore": ["children"] }]
   }
 }

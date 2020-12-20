@@ -1,6 +1,8 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, Heading, Text } from '@chakra-ui/react';
+import { PlayerContext, setTrack } from 'client/state/PlayerContext';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
+import { useContext } from 'react';
 import tracksSource from '../../public/tracks.json';
 
 export const getStaticProps: GetStaticProps<TrackProps, { trackId: string }> = async (context) => {
@@ -29,11 +31,14 @@ type TrackProps = {
 };
 
 export default function Track({ track }: TrackProps) {
+  const { dispatch } = useContext(PlayerContext);
+
   return (
     <Box>
       <Image src={`/img/${track.id}.jpg`} height="187" width="240" />
       <Heading>{track.title}</Heading>
       <Text>{track.description}</Text>
+      <Button onClick={() => dispatch(setTrack(track))}>Play</Button>
     </Box>
   );
 }

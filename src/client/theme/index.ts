@@ -14,6 +14,9 @@ export default extendTheme({
         transition: 'background-color 0.2s',
         lineHeight: 'base',
       },
+      '#__next': {
+        paddingBottom: '40px',
+      },
       '*::placeholder': {
         color: mode('gray.400', 'whiteAlpha.400')(props),
       },

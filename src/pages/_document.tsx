@@ -6,7 +6,9 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <meta charSet="utf-8" />
+        </Head>
         <body style={{ backgroundColor: theme.colors.gray[900] }}>
           <ColorModeScript initialColorMode="dark" />
           <Main />
