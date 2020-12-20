@@ -1,3 +1,5 @@
+import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import tracksSource from '../../public/tracks.json';
 
@@ -15,15 +17,18 @@ type HomeProps = {
 
 export default function Home({ tracks }: HomeProps) {
   return (
-    <div>
-      Hello World {tracks.length}
+    <SimpleGrid columns={[1, 2, 3, 4, 5]} spacing="8" p="8">
       {tracks.map((track) => (
-        <div key={track.id}>
+        <Box key={track.id}>
           <Link href={`/${track.id}`}>
-            <a>{track.title}</a>
+            <a>
+              <Image src={`/img/${track.id}.jpg`} height="187" width="240" />
+              <Heading fontSize="xl">{track.title}</Heading>
+              <Text>{track.tags}</Text>
+            </a>
           </Link>
-        </div>
+        </Box>
       ))}
-    </div>
+    </SimpleGrid>
   );
 }

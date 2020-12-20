@@ -1,5 +1,6 @@
+import { Box, Heading, Text } from '@chakra-ui/react';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
+import Image from 'next/image';
 import tracksSource from '../../public/tracks.json';
 
 export const getStaticProps: GetStaticProps<TrackProps, { trackId: string }> = async (context) => {
@@ -28,12 +29,11 @@ type TrackProps = {
 };
 
 export default function Track({ track }: TrackProps) {
-  const router = useRouter();
-  const { trackId } = router.query;
-
   return (
-    <p>
-      Track ID: {trackId} {track.title}
-    </p>
+    <Box>
+      <Image src={`/img/${track.id}.jpg`} height="187" width="240" />
+      <Heading>{track.title}</Heading>
+      <Text>{track.description}</Text>
+    </Box>
   );
 }
