@@ -20,8 +20,9 @@ const playerSlice = createSlice({
   name: 'player',
   reducers: {
     setTrack: (state, action: PayloadAction<Track>) => {
-      state.audioApi?.play();
       state.track = action.payload;
+      state.audioApi?.load();
+      state.audioApi?.play();
     },
     setAudioApi: (state, action: PayloadAction<HTMLAudioElement>) => {
       // @ts-ignore
