@@ -1,8 +1,9 @@
 import { Box, Button, Heading, Text } from '@chakra-ui/react';
-import { PlayerContext, setTrack } from 'client/state/PlayerContext';
+import { AppDispatch } from 'client/state';
+import { setTrack } from 'client/state/playerSlice';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
-import { useContext } from 'react';
+import { useDispatch } from 'react-redux';
 import tracksSource from '../../public/tracks.json';
 
 export const getStaticProps: GetStaticProps<TrackProps, { trackId: string }> = async (context) => {
@@ -31,7 +32,7 @@ type TrackProps = {
 };
 
 export default function Track({ track }: TrackProps) {
-  const { dispatch } = useContext(PlayerContext);
+  const dispatch = useDispatch<AppDispatch>();
 
   return (
     <Box>

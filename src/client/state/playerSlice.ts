@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
-import { AnyAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import React, { FC, useMemo, useReducer } from 'react';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type tracks from '../../../public/tracks.json';
 
 type Track = typeof tracks[number];
@@ -33,16 +32,4 @@ const playerSlice = createSlice({
 });
 
 export const { setTrack, setAudioApi } = playerSlice.actions;
-const playerReducer = playerSlice.reducer;
-
-export const PlayerContext = React.createContext<{
-  state: PlayerContextState;
-  dispatch: React.Dispatch<AnyAction>;
-}>(undefined as any);
-
-export const PlayerProvider: FC = ({ children }) => {
-  const [state, dispatch] = useReducer(playerReducer, initialPlayerContextState);
-  const contextValue = useMemo(() => ({ state, dispatch }), [state, dispatch]);
-
-  return <PlayerContext.Provider value={contextValue}>{children}</PlayerContext.Provider>;
-};
+export default playerSlice.reducer;
