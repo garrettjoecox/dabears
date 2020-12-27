@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="manifest" href="manifest.webmanifest" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#000000" />
         <title>dabears mixes</title>
       </Head>

@@ -2,6 +2,13 @@ import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
 export default extendTheme({
+  components: {
+    Button: {
+      baseStyle: {
+        borderRadius: 'full',
+      },
+    },
+  },
   styles: {
     global: (props) => ({
       'html, body, #root': {

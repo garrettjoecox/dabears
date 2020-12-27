@@ -7,7 +7,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="UTF-8" />
+          <meta charSet="utf-8" />
           <meta name="description" content="House, Trance, Dubstep, and Trap mixes" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/icon.svg" type="image/svg+xml" sizes="any" />
