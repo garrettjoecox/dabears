@@ -7,7 +7,12 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="utf-8" />
+          <meta charSet="UTF-8" />
+          <meta name="description" content="House, Trance, Dubstep, and Trap mixes" />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/icon.svg" type="image/svg+xml" sizes="any" />
+          <link rel="apple-touch-icon" href="/apple.png" />
+          <link rel="manifest" href="/manifest.webmanifest" />
         </Head>
         <body style={{ backgroundColor: theme.colors.black }}>
           <ColorModeScript initialColorMode="dark" />

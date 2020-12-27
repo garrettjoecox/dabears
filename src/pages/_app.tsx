@@ -11,8 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <title>dabears</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="manifest" href="manifest.webmanifest" />
+        <meta name="theme-color" content="#000000" />
+        <title>dabears mixes</title>
       </Head>
       <Provider store={store}>
         <ChakraProvider theme={theme}>
