@@ -1,8 +1,11 @@
-import { Box, Button, Heading, Text } from '@chakra-ui/react';
+import { ChevronLeftIcon } from '@chakra-ui/icons';
+import { Button, Container, Heading, IconButton, Text } from '@chakra-ui/react';
 import { AppDispatch } from 'client/state';
 import { setTrack } from 'client/state/playerSlice';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import tracksSource from '../../public/tracks.json';
 
@@ -35,11 +38,14 @@ export default function Track({ track }: TrackProps) {
   const dispatch = useDispatch<AppDispatch>();
 
   return (
-    <Box>
+    <Container maxW="80ch">
+      <Link href="/" scroll={false} passHref>
+        <IconButton as="a" aria-label="back" variant="ghost" icon={<ChevronLeftIcon boxSize="9" />} />
+      </Link>
       <Image src={`/img/${track.id}.jpg`} height="187" width="240" />
       <Heading>{track.title}</Heading>
       <Text>{track.description}</Text>
       <Button onClick={() => dispatch(setTrack(track))}>Play</Button>
-    </Box>
+    </Container>
   );
 }

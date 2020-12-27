@@ -9,7 +9,7 @@ export default class Document extends NextDocument {
         <Head>
           <meta charSet="utf-8" />
         </Head>
-        <body style={{ backgroundColor: theme.colors.gray[900] }}>
+        <body style={{ backgroundColor: theme.colors.black }}>
           <ColorModeScript initialColorMode="dark" />
           <Main />
           <NextScript />
