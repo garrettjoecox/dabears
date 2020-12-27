@@ -34,7 +34,14 @@ export default function Home({ tracks }: HomeProps) {
       {tracks.map((track) => (
         <WrapItem key={track.id}>
           <Link href={`/${track.id}`} passHref>
-            <Box as="a" role="group" w={['175px', '175px', '240px']} tabIndex={0} outline="none">
+            <Box
+              as="a"
+              aria-label={track.title}
+              role="group"
+              w={['175px', '175px', '240px']}
+              tabIndex={0}
+              outline="none"
+            >
               <Box position="relative" h={['136px', '136px', '187px']}>
                 <Image src={`/img/${track.id}.jpg`} height="187px" width="240px" alt={track.title} />
                 <Center
