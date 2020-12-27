@@ -39,7 +39,7 @@ export default function Home({ tracks }: HomeProps) {
         <meta property="og:url" content="https://dabears.garrettcox.dev" />
         <meta property="og:image" content="https://dabears.garrettcox.dev/og.png" />
       </Head>
-      <Wrap spacing={['4', '4', '8']} p="8" justify="center">
+      <Wrap spacing={['4', '4', '8']} p={['4', '4', '8']} justify="center">
         {tracks.map((track) => (
           <WrapItem key={track.id}>
             <Link href={`/${track.id}`} passHref>
@@ -47,11 +47,11 @@ export default function Home({ tracks }: HomeProps) {
                 as="a"
                 aria-label={track.title}
                 role="group"
-                w={['175px', '175px', '240px']}
+                w={['160px', '160px', '240px']}
                 tabIndex={0}
                 outline="none"
               >
-                <Box position="relative" h={['136px', '136px', '187px']}>
+                <Box position="relative" h={['124px', '124px', '187px']}>
                   <Image src={`/img/${track.id}.jpg`} height="187px" width="240px" alt={track.title} />
                   <Center
                     bg="blackAlpha.600"
@@ -102,10 +102,12 @@ export default function Home({ tracks }: HomeProps) {
                     </Button>
                   </Center>
                 </Box>
-                <Heading fontSize="lg" isTruncated>
+                <Heading fontSize={['md', 'md', 'lg']} isTruncated>
                   {track.title}
                 </Heading>
-                <Text color="gray.500">{track.tags}</Text>
+                <Text color="gray.500" fontSize={['sm', 'sm', 'lg']}>
+                  {track.tags}
+                </Text>
               </Box>
             </Link>
           </WrapItem>
