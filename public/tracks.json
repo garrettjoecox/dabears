@@ -1,5 +1,129 @@
 [
   {
+    "id": "encore",
+    "origin": "http://mixes.dabears.ca/v2/encore/",
+    "date": "2023-03-21T22:15:01+00:00",
+    "title": "Encore",
+    "description": "A modern selection of house beats from a long overdue return.",
+    "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2023/03/dabears_encore.jpg",
+    "source": "http://mixes.dabears.ca/dabears_encore.mp3",
+    "tags": ["Deep House", "Electro House"],
+    "tracklist": [
+      {
+        "artist": "Maxi Jazz, Vintage Culture",
+        "title": "Commotion"
+      },
+      {
+        "artist": "KREAM",
+        "title": "Pressure"
+      },
+      {
+        "artist": "KREAM",
+        "title": "Take Control"
+      },
+      {
+        "artist": "Meduza, James Hype, Goodboys",
+        "title": "Piece of Your Heart (James Hype Remix)"
+      },
+      {
+        "artist": "Glass Petals",
+        "title": "Leave Your Mind Behind"
+      },
+      {
+        "artist": "Mau P",
+        "title": "Drugs From Amsterdam"
+      },
+      {
+        "artist": "Fisher",
+        "title": "Losing It (Odd Mob Evil Edit)"
+      },
+      {
+        "artist": "Tough Love, Lo’99",
+        "title": "Woo Dat"
+      },
+      {
+        "artist": "Tita Lau, James Hype",
+        "title": "Disconnected"
+      },
+      {
+        "artist": "ACRAZE",
+        "title": "Do It To It"
+      },
+      {
+        "artist": "SIDEPIECE",
+        "title": "Together"
+      },
+      {
+        "artist": "Botnek",
+        "title": "Spaceman (House Divided Remix)"
+      },
+      {
+        "artist": "Thomas Newson",
+        "title": "In The Club"
+      },
+      {
+        "artist": "James Carter, Elly Duhe, Meduza, FAST BOY",
+        "title": "Bad Memories"
+      },
+      {
+        "artist": "KREAM",
+        "title": "About You"
+      },
+      {
+        "artist": "Chris Lorenzo",
+        "title": "California Dreamin’ (feat. High Jinx) (Vintage Culture Remix)"
+      },
+      {
+        "artist": "John Summit",
+        "title": "Deep End (SIDEPIECE Remix)"
+      },
+      {
+        "artist": "SIDEPIECE",
+        "title": "Acrobatic"
+      },
+      {
+        "artist": "Ownboss, Sevek",
+        "title": "Move Your Body (Tiesto Remix)"
+      },
+      {
+        "artist": "Curbi, PollyAnna",
+        "title": "Vertigo"
+      },
+      {
+        "artist": "Matroda",
+        "title": "Forget It"
+      },
+      {
+        "artist": "Vintage Culture, James Hype",
+        "title": "You Give Me A Feeling"
+      },
+      {
+        "artist": "Ranger Trucco",
+        "title": "Dani Girl"
+      },
+      {
+        "artist": "Kyle Watson, MAY BBY",
+        "title": "Magic Carpet"
+      },
+      {
+        "artist": "Jonas Blue, Sevenn",
+        "title": "Angles"
+      },
+      {
+        "artist": "Nu Aspect",
+        "title": "Light"
+      },
+      {
+        "artist": "Bob Moses",
+        "title": "Time and Time Again"
+      },
+      {
+        "artist": "Sofi Tukker, John Summit",
+        "title": "Sun Came Up"
+      }
+    ]
+  },
+  {
     "id": "evanescent",
     "origin": "http://mixes.dabears.ca/v2/evanescent/",
     "date": "2015-03-11T22:15:01+00:00",
@@ -7,9 +131,7 @@
     "description": "Top 30 selections of 2014 Trance releases.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2015/03/dabears_evanescent.jpg",
     "source": "http://mixes.dabears.ca/dabears_evanescent.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "Paul Oakenfold &amp; Cassandra Fox",
@@ -137,9 +259,7 @@
     "description": "Immerse yourself in the deep house sound.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2014/10/dabears_intoodeep.jpg",
     "source": "http://mixes.dabears.ca/dabears_intoodeep.mp3",
-    "tags": [
-      "Deep House"
-    ],
+    "tags": ["Deep House"],
     "tracklist": [
       {
         "artist": "Josh Butler",
@@ -267,9 +387,7 @@
     "description": "My 80 min essential selection of the best 2013 electro & progressive house.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2014/04/cover_ilhm2013.jpg",
     "source": "http://mixes.dabears.ca/dabears_ilhm2013.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Lana Del Ray",
@@ -393,9 +511,7 @@
     "description": "My essential selection of the best 2013 trap.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2014/01/cover_itsatrap.jpg",
     "source": "http://mixes.dabears.ca/dabears_itsatrap.mp3",
-    "tags": [
-      "Trap"
-    ],
+    "tags": ["Trap"],
     "tracklist": [
       {
         "artist": "Feed Me",
@@ -527,9 +643,7 @@
     "description": "My selection of the top trance of 2013.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2013/11/cover_shimmers.jpg",
     "source": "http://mixes.dabears.ca/dabears_shimmers.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "Armin Van Buuren feat. Laura Jansen",
@@ -633,9 +747,7 @@
     "description": "High energy electro house mix full of future 2013 summer anthems.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2013/06/cover_wonderland.jpg",
     "source": "http://mixes.dabears.ca/dabears_wonderland.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "The Aston Shuffle vs. Tommy Trash",
@@ -735,9 +847,7 @@
     "description": "Dubstep & Trap combine for an eclectic cocktail",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2013/04/cover_paralyzer.jpg",
     "source": "http://mixes.dabears.ca/dabears_paralyzer.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "Avicii vs. Nicky Romero",
@@ -833,9 +943,7 @@
     "description": "My selection of the top electro house tracks of 2012",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2013/02/cover_ilhm2012.jpg",
     "source": "http://mixes.dabears.ca/dabears_ilhm2012.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Cazzette",
@@ -967,9 +1075,7 @@
     "description": "My selection of the top 20 trance tracks of 2012",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2013/01/cover_eloquence.jpg",
     "source": "http://mixes.dabears.ca/dabears_eloquence.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "Velvetine",
@@ -1057,9 +1163,7 @@
     "description": "An Electro & Progressive House collection sure to please.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2012/11/cover_elixir2.jpg",
     "source": "http://www.dabears.ca/dabears_elixir.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Popeska",
@@ -1183,9 +1287,7 @@
     "description": "A collection of the best 2012 Summer Dubstep",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2012/09/cover_turbulence.jpg",
     "source": "http://mixes.dabears.ca/dabears_turbulence.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "Nostalgia",
@@ -1301,9 +1403,7 @@
     "description": "Chilled Out Progressive House from the past 3 years.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2012/07/cover_serene.jpg",
     "source": "http://mixes.dabears.ca/dabears_serene.mp3",
-    "tags": [
-      "Progressive House"
-    ],
+    "tags": ["Progressive House"],
     "tracklist": [
       {
         "artist": "Reflekt",
@@ -1399,9 +1499,7 @@
     "description": "Electro & Progressive House with a mix of Dubstep, just in time for EDC 2012 in Las Vegas.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2012/05/cover_ether1.jpg",
     "source": "http://mixes.dabears.ca/dabears_ether.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Mord Fustang",
@@ -1517,9 +1615,7 @@
     "description": "A dubstep mix made of pure fire, embers hits your ears with a flurry of pounding basslines.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2012/03/cover_embers.jpg",
     "source": "http://mixes.dabears.ca/dabears_embers.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "Nero",
@@ -1615,9 +1711,7 @@
     "description": "Best electro/progressive house releases from 2011, and some older gems too.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2012/01/cover_2011.jpg",
     "source": "http://mixes.dabears.ca/dabears_i_love_house_music_2011.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Avicii",
@@ -1729,9 +1823,7 @@
     "description": "Surrender yourself to the big kicks and hard synths in this hour long electro house mix.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2011/12/cover_surrender.jpg",
     "source": "http://mixes.dabears.ca/dabears_surrender.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Swedish House Mafia",
@@ -1843,9 +1935,7 @@
     "description": "An hour of Euphoric trance offers an escape from heavy hitting dub & electro",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2011/11/cover_bliss.jpg",
     "source": "http://mixes.dabears.ca/dabears_bliss.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "John O Callaghan feat. Lo-Fi Sugar",
@@ -1933,9 +2023,7 @@
     "description": "Starts off loud and dirty, ending with some chill dubstep.",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2011/11/dabears_visions.jpg",
     "source": "http://mixes.dabears.ca/dabears_visions.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "Porter Robinson",
@@ -2015,9 +2103,7 @@
     "description": "Dirty beats, hard synths, pure electro that fits perfectly into a CD. 20th Electro House mix!",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2011/11/dabears_flow.jpg",
     "source": "http://mixes.dabears.ca/dabears_flow.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Deadmau5",
@@ -2129,9 +2215,7 @@
     "description": "This is the .1% Lysol couldn’t clean",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2011/11/cover_malevolent.jpg",
     "source": "http://mixes.dabears.ca/dabears_malevolent.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "Katy Perry",
@@ -2223,9 +2307,7 @@
     "description": "One hour of the dirtiest & newest electro house!",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2011/11/cover_devious.jpg",
     "source": "http://mixes.dabears.ca/dabears_devious.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Orlando Voorn",
@@ -2317,9 +2399,7 @@
     "description": "The best of 2010′s electro house!",
     "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2011/11/cover_ilovehousemusic3.jpg",
     "source": "http://mixes.dabears.ca/dabears_ilovehouse3.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Intro"
@@ -2422,9 +2502,7 @@
     "description": "Some tasty filthy dubstep for you.",
     "art": "http://mixes.dabears.ca/images/cover_havoc.jpg",
     "source": "http://mixes.dabears.ca/dabears_havoc.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "deadmau5",
@@ -2524,9 +2602,7 @@
     "description": "Hard hitting Electro House with Progressive Breaks at 320kbps!",
     "art": "http://mixes.dabears.ca/images/cover_psychedelic_permadrunk.jpg",
     "source": "http://mixes.dabears.ca/dabears_psychedelic_permadrunk.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Deadmau5",
@@ -2622,9 +2698,7 @@
     "description": "45 Minutes of the newest dubstep, more laid back than usual",
     "art": "http://mixes.dabears.ca/images/cover_sicktonight.jpg",
     "source": "http://mixes.dabears.ca/dabears_sicktonight.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "The Beatles",
@@ -2724,9 +2798,7 @@
     "description": "One hour of the latest hard hitting electro beats… what more is there to say?",
     "art": "http://mixes.dabears.ca/images/cover_punch.jpg",
     "source": "http://mixes.dabears.ca/dabears_punch.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Marcus Kaes",
@@ -2850,9 +2922,7 @@
     "description": "Some of the top songs of 2009 are included, as well as some great new releases.",
     "art": "http://mixes.dabears.ca/images/cover_tranquility.jpg",
     "source": "http://mixes.dabears.ca/dabears_tranquility.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "Lange feat. Sarah Howells",
@@ -2948,9 +3018,7 @@
     "description": "Dubstep Mix… I haven’t stated this enough but if you aren’t listening to this music with some form of a bass speaker you are missing out.",
     "art": "http://mixes.dabears.ca/images/cover_dublicious.jpg",
     "source": "http://mixes.dabears.ca/dabears_dublicious.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "Drake",
@@ -3050,9 +3118,7 @@
     "description": "Electro House mix that is all over the map… give it a listen and enjoy",
     "art": "http://mixes.dabears.ca/images/cover_untz.jpg",
     "source": "http://mixes.dabears.ca/dabears_untz.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Muse",
@@ -3148,9 +3214,7 @@
     "description": "Exploring all that dubstep has to offer, this mix hopefully proves the genre has got what it takes to be huge",
     "art": "http://mixes.dabears.ca/images/cover_peacelovedub.jpg",
     "source": "http://mixes.dabears.ca/dabears_peace_love_dub.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "Mt. Eden",
@@ -3258,9 +3322,7 @@
     "description": "Featuring some distinct basslines, Crank delivers it all within a fastpaced hour.",
     "art": "http://mixes.dabears.ca/images/cover_crank.jpg",
     "source": "http://mixes.dabears.ca/dabears_crank.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Alexx Kidd",
@@ -3348,9 +3410,7 @@
     "description": "First dubstep mix, new exciting genre that is blowing up quickly. Check it out!",
     "art": "http://mixes.dabears.ca/images/cover_dubtilldawn.jpg",
     "source": "http://mixes.dabears.ca/dabears_dubtilldawn.mp3",
-    "tags": [
-      "Dubstep"
-    ],
+    "tags": ["Dubstep"],
     "tracklist": [
       {
         "artist": "Amanda Blank",
@@ -3438,9 +3498,7 @@
     "description": "dabears’ personal 20 of the best trance tracks mixed together.",
     "art": "http://mixes.dabears.ca/images/cover_lost.jpg",
     "source": "http://mixes.dabears.ca/dabears_lost.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "Motorcycle",
@@ -3524,9 +3582,7 @@
     "description": "I <3 House Music 2 defines everything Electro House should be and is. This is a must download for any house fan. Runtime : 4 Hours",
     "art": "http://mixes.dabears.ca/images/cover_ilovehousemusic2.jpg",
     "source": "http://mixes.dabears.ca/dabears_i_love_house_music_2.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Deadmau5",
@@ -3798,9 +3854,7 @@
     "description": "Pulse brings the noise with an hour of the newest Electro House hits.",
     "art": "http://mixes.dabears.ca/images/cover_pulse.jpg",
     "source": "http://mixes.dabears.ca/dabears_pulse.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "David Guetta",
@@ -3884,9 +3938,7 @@
     "description": "Electro House from mostly unknown artists, this short (45 minutes) mix is my favorite so far.",
     "art": "http://mixes.dabears.ca/images/cover_thatstasty.jpg",
     "source": "http://mixes.dabears.ca/dabears_thatstasty.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Black Eyed Peas",
@@ -3962,9 +4014,7 @@
     "description": "Old Electro House hits meet fresh releases to form a vocal heavy electro mix",
     "art": "http://mixes.dabears.ca/images/cover_twist.jpg",
     "source": "http://mixes.dabears.ca/dabears_twist.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Felguk",
@@ -4052,9 +4102,7 @@
     "description": "Alternating between Vocal and Regular Trance, Sunrise has a distinct melody you will want to hear again and again.",
     "art": "http://mixes.dabears.ca/images/cover_sunrise.jpg",
     "source": "http://mixes.dabears.ca/dabears_sunrise.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "John O Callaghan feat. Audrey Gallagher",
@@ -4150,9 +4198,7 @@
     "description": "Hard hitting Electro House hits form together into one fast paced hour",
     "art": "http://mixes.dabears.ca/images/cover_play.jpg",
     "source": "http://mixes.dabears.ca/dabears_play.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "ACDC",
@@ -4240,9 +4286,7 @@
     "description": "A vast range of different electro house sounds, Amnesia puts them together to create a memorable hour.",
     "art": "http://mixes.dabears.ca/images/cover_amnesia.jpg",
     "source": "http://mixes.dabears.ca/dabears_amnesia.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Deadmau5 feat. Three Six Mafia",
@@ -4330,9 +4374,7 @@
     "description": "Starting off strong and never stopping, Transcendence is 2 hours of smooth upbeat trance anyone will enjoy.",
     "art": "http://mixes.dabears.ca/images/cover_transcendence.jpg",
     "source": "http://mixes.dabears.ca/dabears_transcendence.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "Rafael Frost",
@@ -4424,9 +4466,7 @@
     "description": "Fitting on an 80 Min CD, this mix will stay with you much longer than its timeslot would dictate",
     "art": "http://mixes.dabears.ca/images/cover_afterhours.jpg",
     "source": "http://mixes.dabears.ca/dabears_afterhours.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Miles Dyson",
@@ -4522,9 +4562,7 @@
     "description": "2 and a half hours of trance that any music fan will enjoy",
     "art": "http://mixes.dabears.ca/images/serenity_cover.jpg",
     "source": "http://mixes.dabears.ca/dabears_serenity.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "DJ Eco",
@@ -4656,9 +4694,7 @@
     "description": "A compilation from the previous 8 Electro House Mixes, this is a 2 hour long rollercoaster full of the best electro house hits!",
     "art": "http://mixes.dabears.ca/ilovehouse_cover.jpg",
     "source": "http://mixes.dabears.ca/dabears_I_love_house_music.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "deadmau5",
@@ -4818,9 +4854,7 @@
     "description": "Working off it’s flow this mix will build you up for an hour you will not forget",
     "art": "http://mixes.dabears.ca/images/cover_frequency.jpg",
     "source": "http://mixes.dabears.ca/dabears_frequency.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Justice",
@@ -4916,9 +4950,7 @@
     "description": "Dance floor directed, this mix samples some very familiar tracks.",
     "art": "http://mixes.dabears.ca/images/cover_bumpin.jpg",
     "source": "http://mixes.dabears.ca/dabears_bumpin_the_night.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Deadmau5",
@@ -5018,9 +5050,7 @@
     "description": "Trance Mix full of Energy, vocals, and different melodies. Sure to please any music fan.",
     "art": "http://mixes.dabears.ca/images/cover.jpg",
     "source": "http://mixes.dabears.ca/dabears_euphoria.mp3",
-    "tags": [
-      "Trance"
-    ],
+    "tags": ["Trance"],
     "tracklist": [
       {
         "artist": "Orjan Nielsen",
@@ -5144,9 +5174,7 @@
     "description": "Some new sounds, some old ones, some classic samples all mixed into one bass driven mix that should impress.",
     "art": "http://mixes.dabears.ca/images/cover_weekend.jpg",
     "source": "http://mixes.dabears.ca/dabears_welcome_to_the_weekend.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Corenell",
@@ -5270,9 +5298,7 @@
     "description": "Perfect for any late night gathering, this mix demands a powerful sound system.",
     "art": "http://mixes.dabears.ca/images/cover_dusk.jpg",
     "source": "http://mixes.dabears.ca/dabears_from_dusk_till_dawn.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Deadmau5 &amp; MC Flipside",
@@ -5384,9 +5410,7 @@
     "description": "An ecleptic mix of Electro House sounds that will be sure to keep you moving.",
     "art": "http://mixes.dabears.ca/images/vol4.jpg",
     "source": "http://mixes.dabears.ca/dabears_house_nights.mp3",
-    "tags": [
-      "Electro House"
-    ],
+    "tags": ["Electro House"],
     "tracklist": [
       {
         "artist": "Miles Dyson",
