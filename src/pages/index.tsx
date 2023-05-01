@@ -52,7 +52,7 @@ export default function Home({ tracks }: HomeProps) {
                 outline="none"
               >
                 <Box position="relative" h={['124px', '124px', '187px']}>
-                  <Image src={`/img/${track.id}.jpg`} height="187" width="240" alt={track.title} />
+                  <Image src={`/img/${track.id}.jpg`} sizes="240px" fill priority alt={track.title} />
                   <Center
                     bg="blackAlpha.600"
                     transition="all 100ms ease"
