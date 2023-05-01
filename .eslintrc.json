@@ -1,33 +1,3 @@
 {
-  "extends": [
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint",
-    "prettier/prettier"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "env": {
-    "node": true,
-    "browser": true,
-    "es6": true
-  },
-  "ignorePatterns": ["node_modules", "out", ".next"],
-  "rules": {
-    "@typescript-eslint/no-use-before-define": ["error", { "functions": false, "classes": false }],
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "off",
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      {
-        "components": ["Link"],
-        "specialLink": ["href"],
-        "aspects": ["invalidHref", "preferButton"]
-      }
-    ],
-    "react/prop-types": ["error", { "ignore": ["children"] }]
-  }
+  "extends": ["next", "prettier"]
 }

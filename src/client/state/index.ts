@@ -11,6 +11,6 @@ const store = configureStore({
 
 export default store;
 
-export type AppDispatch = typeof import('client/state').default['dispatch'];
+export type AppDispatch = typeof import('@/client/state').default['dispatch'];
 
-export type AppState = ReturnType<typeof import('client/state/rootReducer').default>;
+export type AppState = ReturnType<typeof import('@/client/state/rootReducer').default>;

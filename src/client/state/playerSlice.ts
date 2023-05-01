@@ -2,7 +2,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type tracks from '../../../public/tracks.json';
 
-type Track = typeof tracks[number];
+type Track = (typeof tracks)[number];
 
 type PlayerContextState = {
   state: 'playing' | 'paused' | 'empty';

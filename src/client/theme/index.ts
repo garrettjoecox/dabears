@@ -10,7 +10,7 @@ export default extendTheme({
     },
   },
   styles: {
-    global: (props) => ({
+    global: (props: any) => ({
       'html, body, #root': {
         height: '100%',
       },

@@ -1,10 +1,10 @@
+import { AppDispatch } from '@/client/state';
+import { setTrack } from '@/client/state/playerSlice';
 import { Box, Button, Center, Heading, Text, Wrap, WrapItem } from '@chakra-ui/react';
-import { AppDispatch } from 'client/state';
-import { setTrack } from 'client/state/playerSlice';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import tracksSource from '../../public/tracks.json';
 
@@ -24,7 +24,7 @@ export default function Home({ tracks }: HomeProps) {
   const dispatch = useDispatch<AppDispatch>();
 
   const onTrackPlay = useCallback(
-    (t: typeof tracksSource[number]) => {
+    (t: (typeof tracksSource)[number]) => {
       dispatch(setTrack(t));
     },
     [dispatch]
@@ -42,7 +42,7 @@ export default function Home({ tracks }: HomeProps) {
       <Wrap spacing={['4', '4', '8']} p={['4', '4', '8']} justify="center">
         {tracks.map((track) => (
           <WrapItem key={track.id}>
-            <Link href={`/${track.id}`} passHref>
+            <Link href={`/${track.id}`} passHref legacyBehavior>
               <Box
                 as="a"
                 aria-label={track.title}
@@ -52,7 +52,7 @@ export default function Home({ tracks }: HomeProps) {
                 outline="none"
               >
                 <Box position="relative" h={['124px', '124px', '187px']}>
-                  <Image src={`/img/${track.id}.jpg`} height="187px" width="240px" alt={track.title} />
+                  <Image src={`/img/${track.id}.jpg`} height="187" width="240" alt={track.title} />
                   <Center
                     bg="blackAlpha.600"
                     transition="all 100ms ease"

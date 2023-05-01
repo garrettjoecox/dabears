@@ -1,7 +1,7 @@
+import { AppDispatch, AppState } from '@/client/state';
+import { setAudioApi } from '@/client/state/playerSlice';
 import { Box } from '@chakra-ui/react';
-import { AppDispatch, AppState } from 'client/state';
-import { setAudioApi } from 'client/state/playerSlice';
-import React, { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 type PlayerProps = {};

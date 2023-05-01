@@ -1,10 +1,9 @@
+import Player from '@/client/components/Player';
+import store from '@/client/state';
+import theme from '@/client/theme';
 import { ChakraProvider } from '@chakra-ui/react';
-import Player from 'client/components/Player';
-import store from 'client/state';
-import theme from 'client/theme';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import React from 'react';
 import { Provider } from 'react-redux';
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -1,3 +1,5 @@
+import { AppDispatch } from '@/client/state';
+import { setTrack } from '@/client/state/playerSlice';
 import { ChevronLeftIcon, TimeIcon } from '@chakra-ui/icons';
 import {
   Box,
@@ -14,13 +16,10 @@ import {
   Tr,
   useBreakpointValue,
 } from '@chakra-ui/react';
-import { AppDispatch } from 'client/state';
-import { setTrack } from 'client/state/playerSlice';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { useDispatch } from 'react-redux';
 import tracksSource from '../../public/tracks.json';
 
@@ -46,7 +45,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 type TrackProps = {
-  track: typeof tracksSource[number];
+  track: (typeof tracksSource)[number];
 };
 
 export default function Track({ track }: TrackProps) {
@@ -67,14 +66,14 @@ export default function Track({ track }: TrackProps) {
       </Head>
       <Container maxW="80ch" mb="4">
         <Box py="4">
-          <Link href="/" scroll={false} passHref>
+          <Link href="/" scroll={false} passHref legacyBehavior>
             <Button as="a" aria-label="back" leftIcon={<ChevronLeftIcon boxSize="5" />} variant="ghost">
               Mixes
             </Button>
           </Link>
         </Box>
         <Flex direction={['column', 'column', 'row']} alignItems={['center', 'center', 'end']}>
-          <Image src={`/img/${track.id}.jpg`} height="187" width="240" />
+          <Image alt={track.title} src={`/img/${track.id}.jpg`} height="187" width="240" />
           <Box textAlign={['center', 'center', 'initial']} marginLeft={['0', '0', '4']}>
             <Heading>{track.title}</Heading>
             <Text>{track.tags}</Text>
