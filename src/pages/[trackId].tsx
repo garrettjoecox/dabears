@@ -50,7 +50,7 @@ type TrackProps = {
 
 export default function Track({ track }: TrackProps) {
   const dispatch = useDispatch<AppDispatch>();
-  const displayTimestamp = useBreakpointValue({ base: false, md: true });
+  const displayTimestamp = useBreakpointValue({ base: false, md: false });
 
   return (
     <>
