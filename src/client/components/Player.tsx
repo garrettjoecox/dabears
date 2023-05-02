@@ -77,7 +77,7 @@ const Player: FC<PlayerProps> = () => {
   }, [audioRef]);
 
   return (
-    <Box w="100%" position="fixed" bottom="0" bg="gray.900">
+    <Box w="100%" position="fixed" bottom="env(safe-area-inset-bottom)" bg="gray.900">
       <audio ref={audioRef} controls style={{ width: '100%' }}>
         Your browser does not support the audio element.
       </audio>
