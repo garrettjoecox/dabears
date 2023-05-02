@@ -24,13 +24,14 @@ import { useDispatch } from 'react-redux';
 import tracksSource from '../../public/tracks.json';
 
 export const getStaticProps: GetStaticProps<TrackProps, { trackId: string }> = async (context) => {
-  const track = tracksSource.find((t) => t.id === context.params?.trackId);
+  const trackIndex = tracksSource.findIndex((t) => t.id === context.params?.trackId);
 
-  if (!track) return { notFound: true };
+  if (trackIndex === -1) return { notFound: true };
 
   return {
     props: {
-      track,
+      trackIndex,
+      track: tracksSource[trackIndex],
     },
   };
 };
@@ -45,10 +46,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 type TrackProps = {
+  trackIndex: number;
   track: (typeof tracksSource)[number];
 };
 
-export default function Track({ track }: TrackProps) {
+export default function Track({ track, trackIndex }: TrackProps) {
   const dispatch = useDispatch<AppDispatch>();
   const displayTimestamp = useBreakpointValue({ base: false, md: false });
 
@@ -80,7 +82,7 @@ export default function Track({ track }: TrackProps) {
             <Text color="gray.500">
               {new Date(track.date).getFullYear()} &#8226; {track.tracklist.length} songs, 46 min
             </Text>
-            <Button onClick={() => dispatch(setTrack(track))} variant="solid" colorScheme="blue" px="10" mt="2">
+            <Button onClick={() => dispatch(setTrack(trackIndex))} variant="solid" colorScheme="blue" px="10" mt="2">
               Play
             </Button>
           </Box>

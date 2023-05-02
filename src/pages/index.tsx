@@ -24,7 +24,7 @@ export default function Home({ tracks }: HomeProps) {
   const dispatch = useDispatch<AppDispatch>();
 
   const onTrackPlay = useCallback(
-    (t: (typeof tracksSource)[number]) => {
+    (t: number) => {
       dispatch(setTrack(t));
     },
     [dispatch]
@@ -40,7 +40,7 @@ export default function Home({ tracks }: HomeProps) {
         <meta property="og:image" content="https://dabears.garrettcox.dev/og.png" />
       </Head>
       <Wrap spacing={['4', '4', '8']} p={['4', '4', '8']} justify="center">
-        {tracks.map((track) => (
+        {tracks.map((track, trackIndex) => (
           <WrapItem key={track.id}>
             <Link href={`/${track.id}`} passHref legacyBehavior>
               <Box
@@ -77,7 +77,7 @@ export default function Home({ tracks }: HomeProps) {
                       tabIndex={0}
                       onClick={(event) => {
                         event.preventDefault();
-                        onTrackPlay(track);
+                        onTrackPlay(trackIndex);
                       }}
                       _hover={{ height: '55px', width: '55px' }}
                       _focus={{ height: '55px', width: '55px', shadow: 'outline' }}

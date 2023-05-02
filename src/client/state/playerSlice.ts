@@ -1,36 +1,30 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type tracks from '../../../public/tracks.json';
-
-type Track = (typeof tracks)[number];
+import tracksSource from '../../../public/tracks.json';
 
 type PlayerContextState = {
-  state: 'playing' | 'paused' | 'empty';
-  track: Track | null;
-  audioApi: HTMLAudioElement | null;
+  track: number;
 };
 
 const initialPlayerContextState: PlayerContextState = {
-  state: 'empty',
-  track: null,
-  audioApi: null,
+  track: 0,
 };
 
 const playerSlice = createSlice({
   name: 'player',
   reducers: {
-    setTrack: (state, action: PayloadAction<Track>) => {
+    setTrack: (state, action: PayloadAction<number>) => {
       state.track = action.payload;
-      state.audioApi?.load();
-      state.audioApi?.play();
     },
-    setAudioApi: (state, action: PayloadAction<HTMLAudioElement>) => {
-      // @ts-ignore
-      state.audioApi = action.payload;
+    nextTrack: (state) => {
+      state.track = (state.track + 1) % tracksSource.length;
+    },
+    prevTrack: (state) => {
+      state.track = (state.track - 1 + tracksSource.length) % tracksSource.length;
     },
   },
   initialState: initialPlayerContextState,
 });
 
-export const { setTrack, setAudioApi } = playerSlice.actions;
+export const { setTrack, nextTrack, prevTrack } = playerSlice.actions;
 export default playerSlice.reducer;
