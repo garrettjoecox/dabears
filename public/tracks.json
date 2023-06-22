@@ -1,5 +1,137 @@
 [
   {
+    "id": "kits",
+    "origin": "http://mixes.dabears.ca/v2/kits/",
+    "date": "2023-06-21T15:38:01+00:00",
+    "title": "Kits",
+    "description": "A two hour essential soundscape for those timeless summer evenings.",
+    "art": "http://mixes.dabears.ca/v2/wp-content/uploads/2023/06/kits_album_art.jpg",
+    "source": "http://mixes.dabears.ca/dabears_kits.mp3",
+    "tags": ["Deep House"],
+    "tracklist": [
+      {
+        "artist": "Fred again.., The Blessed Madonna",
+        "title": "Marea (We’ve Lost Dancing)"
+      },
+      {
+        "artist": "RSCL, it’s murph, Twin Diplomacy",
+        "title": "Lost feat. Jack August"
+      },
+      {
+        "artist": "Hot Since 82",
+        "title": "Buggin’ feat. Jem Cooke"
+      },
+      {
+        "artist": "Maverick Sabre",
+        "title": "Slow Down (feat. Jorja Smith) (Vintage Culture & Slow Motion Remix)"
+      },
+      {
+        "artist": "Kryder, Natalie Shay",
+        "title": "Rapture"
+      },
+      {
+        "artist": "Sofi Tukker, Gorgon City",
+        "title": "House Arrest"
+      },
+      {
+        "artist": "Marcus Layton",
+        "title": "Sweet Dreams"
+      },
+      {
+        "artist": "Au/Ra, CamelPhat",
+        "title": "Panic Room (Club Mix)"
+      },
+      {
+        "artist": "Reflekt, delline bass",
+        "title": "Need To Feel Loved (Tinlicker Remix)"
+      },
+      {
+        "artist": "Jem Cooke, Gorgon City",
+        "title": "Dreams"
+      },
+      {
+        "artist": "Naeleck, Sarah Rebacca",
+        "title": "Creep (BYOR Remix)"
+      },
+      {
+        "artist": "Tras Mortimer",
+        "title": "Time of the Season"
+      },
+      {
+        "artist": "Morgan Page",
+        "title": "The Longest Road (Lex Da Funk Mix)"
+      },
+      {
+        "artist": "Motorcycle",
+        "title": "As The Rush Comes (Cristoph Mix)"
+      },
+      {
+        "artist": "Jem Cooke, CamelPhat, Cristoph",
+        "title": "Breathe"
+      },
+      {
+        "artist": "Vintage Culture, Adam K",
+        "title": "Save Me (feat. MKLA)"
+      },
+      {
+        "artist": "SOMMA feat. Nina Chuba",
+        "title": "I Can’t Sleep"
+      },
+      {
+        "artist": "ZHU, Bob Moses",
+        "title": "Desire (Vintage Culture & Kiko Franco Remix)"
+      },
+      {
+        "artist": "Rufus Du Sol",
+        "title": "You Were Right (DJ Edit)"
+      },
+      {
+        "artist": "Reezer",
+        "title": "Who Do You Love"
+      },
+      {
+        "artist": "Parachute Youth, John Summit",
+        "title": "Better Than This"
+      },
+      {
+        "artist": "Au/Ra, Jax Jones",
+        "title": "i miss u (John Summit Remix)"
+      },
+      {
+        "artist": "Ed Sheeran",
+        "title": "Bad Habits (MEDUZA Remix)"
+      },
+      {
+        "artist": "Franky Wah, Artche, Cristoph",
+        "title": "The World You See"
+      },
+      {
+        "artist": "James Hype, Miggy Dela Rosa",
+        "title": "Ferrari"
+      },
+      {
+        "artist": "KREAM",
+        "title": "Sweat"
+      },
+      {
+        "artist": "Marcus Santoro, David Pietras, Marc Benjamin",
+        "title": "Losing Focus"
+      },
+      {
+        "artist": "Rufus Du Sol",
+        "title": "Next To Me (Vintage Culture Remix)"
+      },
+      {
+        "artist": "Rufus Du Sol",
+        "title": "No Place (Club Edit)"
+      },
+      {
+        "artist": "Helsloot, Tinlicker",
+        "title": "Because You Move Me"
+      }
+    ]
+  },
+  {
     "id": "encore",
     "origin": "http://mixes.dabears.ca/v2/encore/",
     "date": "2023-03-21T22:15:01+00:00",
