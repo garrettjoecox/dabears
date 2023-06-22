@@ -89,7 +89,8 @@ export default function Track({ track, trackIndex }: TrackProps) {
             <Heading>{track.title}</Heading>
             <Text>{track.tags}</Text>
             <Text color="gray.500">
-              {new Date(track.date).getFullYear()} &#8226; {track.tracklist.length} songs, 46 min
+              {new Date(track.date).getFullYear()} &#8226; {track.tracklist.length} songs,{' '}
+              {Math.floor(track.length / 60)} min
             </Text>
             {activeTrackIndex === trackIndex ? (
               playbackState === 'playing' ? (

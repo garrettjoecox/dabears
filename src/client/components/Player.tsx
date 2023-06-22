@@ -41,8 +41,6 @@ const Player: FC<PlayerProps> = () => {
         audioRef.current
           .play()
           .then(() => {
-            let track = tracksSource[activeTrackIndex];
-            console.log(track.id, 'duration:', audioRef.current?.duration);
             navigator.mediaSession.setPositionState({
               duration: audioRef.current?.duration,
               playbackRate: audioRef.current?.playbackRate,
