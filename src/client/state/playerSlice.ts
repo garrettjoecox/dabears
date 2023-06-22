@@ -4,15 +4,27 @@ import tracksSource from '../../../public/tracks.json';
 
 type PlayerContextState = {
   track: number;
+  playbackState: MediaSessionPlaybackState;
 };
 
 const initialPlayerContextState: PlayerContextState = {
   track: 0,
+  playbackState: 'none',
 };
 
 const playerSlice = createSlice({
   name: 'player',
   reducers: {
+    play: (state) => {
+      state.playbackState = 'playing';
+    },
+    pause: (state) => {
+      state.playbackState = 'paused';
+    },
+    playTrack: (state, action: PayloadAction<number>) => {
+      state.track = action.payload;
+      state.playbackState = 'playing';
+    },
     setTrack: (state, action: PayloadAction<number>) => {
       state.track = action.payload;
     },
@@ -26,5 +38,5 @@ const playerSlice = createSlice({
   initialState: initialPlayerContextState,
 });
 
-export const { setTrack, nextTrack, prevTrack } = playerSlice.actions;
+export const { play, pause, playTrack, setTrack, nextTrack, prevTrack } = playerSlice.actions;
 export default playerSlice.reducer;

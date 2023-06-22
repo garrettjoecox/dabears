@@ -1,5 +1,5 @@
-import { AppDispatch } from '@/client/state';
-import { setTrack } from '@/client/state/playerSlice';
+import { AppDispatch, AppState } from '@/client/state';
+import { pause, play, playTrack, setTrack } from '@/client/state/playerSlice';
 import { ChevronLeftIcon, TimeIcon } from '@chakra-ui/icons';
 import {
   Box,
@@ -20,7 +20,8 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import tracksSource from '../../public/tracks.json';
 
 export const getStaticProps: GetStaticProps<TrackProps, { trackId: string }> = async (context) => {
@@ -53,6 +54,14 @@ type TrackProps = {
 export default function Track({ track, trackIndex }: TrackProps) {
   const dispatch = useDispatch<AppDispatch>();
   const displayTimestamp = useBreakpointValue({ base: false, md: false });
+  const activeTrackIndex = useSelector((state: AppState) => state.player.track);
+  const playbackState = useSelector((state: AppState) => state.player.playbackState);
+
+  useEffect(() => {
+    if (playbackState == 'none') {
+      dispatch(setTrack(trackIndex));
+    }
+  }, [playbackState, trackIndex, dispatch]);
 
   return (
     <>
@@ -82,9 +91,21 @@ export default function Track({ track, trackIndex }: TrackProps) {
             <Text color="gray.500">
               {new Date(track.date).getFullYear()} &#8226; {track.tracklist.length} songs, 46 min
             </Text>
-            <Button onClick={() => dispatch(setTrack(trackIndex))} variant="solid" colorScheme="blue" px="10" mt="2">
-              Play
-            </Button>
+            {activeTrackIndex === trackIndex ? (
+              playbackState === 'playing' ? (
+                <Button onClick={() => dispatch(pause())} variant="outline" colorScheme="blue" px="10" mt="2">
+                  Pause
+                </Button>
+              ) : (
+                <Button onClick={() => dispatch(play())} variant="solid" colorScheme="blue" px="10" mt="2">
+                  Play
+                </Button>
+              )
+            ) : (
+              <Button onClick={() => dispatch(playTrack(trackIndex))} variant="solid" colorScheme="blue" px="10" mt="2">
+                Play
+              </Button>
+            )}
           </Box>
         </Flex>
         <Table variant="simple">

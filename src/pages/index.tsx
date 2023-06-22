@@ -1,11 +1,11 @@
-import { AppDispatch } from '@/client/state';
-import { setTrack } from '@/client/state/playerSlice';
+import { AppDispatch, AppState } from '@/client/state';
+import { playTrack } from '@/client/state/playerSlice';
 import { Box, Button, Center, Heading, Text, Wrap, WrapItem } from '@chakra-ui/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import tracksSource from '../../public/tracks.json';
 
 export async function getStaticProps() {
@@ -22,10 +22,12 @@ type HomeProps = {
 
 export default function Home({ tracks }: HomeProps) {
   const dispatch = useDispatch<AppDispatch>();
+  const activeTrackIndex = useSelector((state: AppState) => state.player.track);
+  const playbackState = useSelector((state: AppState) => state.player.playbackState);
 
   const onTrackPlay = useCallback(
     (t: number) => {
-      dispatch(setTrack(t));
+      dispatch(playTrack(t));
     },
     [dispatch]
   );
@@ -60,7 +62,7 @@ export default function Home({ tracks }: HomeProps) {
                     w="100%"
                     position="absolute"
                     top="0"
-                    opacity="0"
+                    opacity={activeTrackIndex === trackIndex ? 1 : 0}
                     _groupHover={{ opacity: 1 }}
                     _groupFocus={{ opacity: 1, shadow: 'outline' }}
                     _focusWithin={{ opacity: 1 }}
@@ -82,23 +84,43 @@ export default function Home({ tracks }: HomeProps) {
                       _hover={{ height: '55px', width: '55px' }}
                       _focus={{ height: '55px', width: '55px', shadow: 'outline' }}
                     >
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="play"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512"
-                        color="#FFFFFF"
-                        width="15px"
-                        height="15px"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
-                        />
-                      </svg>
+                      {activeTrackIndex === trackIndex && playbackState === 'playing' ? (
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="pause"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512"
+                          color="#FFFFFF"
+                          width="15px"
+                          height="15px"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="play"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512"
+                          color="#FFFFFF"
+                          width="15px"
+                          height="15px"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                          />
+                        </svg>
+                      )}
                     </Button>
                   </Center>
                 </Box>

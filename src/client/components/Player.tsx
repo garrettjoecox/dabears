@@ -3,12 +3,13 @@ import { FC, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import tracksSource from '../../../public/tracks.json';
 import { AppDispatch, AppState } from '../state';
-import { nextTrack, prevTrack } from '../state/playerSlice';
+import { nextTrack, pause, play, prevTrack } from '../state/playerSlice';
 
 type PlayerProps = {};
 
 const Player: FC<PlayerProps> = () => {
   const activeTrackIndex = useSelector((state: AppState) => state.player.track);
+  const playbackState = useSelector((state: AppState) => state.player.playbackState);
   const dispatch = useDispatch<AppDispatch>();
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -45,20 +46,32 @@ const Player: FC<PlayerProps> = () => {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.addEventListener('play', () => {
+      if (playbackState === 'playing') {
         navigator.mediaSession.playbackState = 'playing';
+        audioRef.current.play();
+      } else {
+        navigator.mediaSession.playbackState = 'paused';
+        audioRef.current.pause();
+      }
+    }
+  }, [playbackState]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.addEventListener('play', () => {
+        dispatch(play());
       });
       audioRef.current.addEventListener('pause', () => {
-        navigator.mediaSession.playbackState = 'paused';
+        dispatch(pause());
       });
       audioRef.current.addEventListener('ended', () => {
         dispatch(nextTrack());
       });
       navigator.mediaSession.setActionHandler('play', () => {
-        audioRef.current?.play();
+        dispatch(play());
       });
       navigator.mediaSession.setActionHandler('pause', () => {
-        audioRef.current?.pause();
+        dispatch(pause());
       });
       navigator.mediaSession.setActionHandler('previoustrack', () => {
         dispatch(prevTrack());
@@ -74,7 +87,7 @@ const Player: FC<PlayerProps> = () => {
         audioRef.current!.currentTime = event.seekTime!;
       });
     }
-  }, [audioRef]);
+  }, [audioRef, dispatch]);
 
   return (
     <Box w="100%" position="fixed" bottom="env(safe-area-inset-bottom)" bg="gray.900">
