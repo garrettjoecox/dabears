@@ -16,26 +16,27 @@ const Player: FC<PlayerProps> = () => {
   useEffect(() => {
     let track = tracksSource[activeTrackIndex];
 
-    navigator.mediaSession.metadata = new MediaMetadata({
-      title: track.title,
-      artist: 'dabears',
-      album: track.tags.join(', '),
-      artwork: [
-        { src: `/img/${track.id}.jpg`, sizes: '96x96', type: 'image/png' },
-        { src: `/img/${track.id}.jpg`, sizes: '128x128', type: 'image/png' },
-        { src: `/img/${track.id}.jpg`, sizes: '192x192', type: 'image/png' },
-        { src: `/img/${track.id}.jpg`, sizes: '256x256', type: 'image/png' },
-        { src: `/img/${track.id}.jpg`, sizes: '384x384', type: 'image/png' },
-        { src: `/img/${track.id}.jpg`, sizes: '512x512', type: 'image/png' },
-      ],
-    });
-    if (audioRef.current) {
-      audioRef.current.src = `https://dabears.s3.amazonaws.com/${tracksSource[activeTrackIndex].id}.mp3`;
+    if (!navigator.mediaSession.metadata || navigator.mediaSession.metadata.title !== track.title) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: track.title,
+        artist: 'dabears',
+        album: track.tags.join(', '),
+        artwork: [
+          { src: `/img/${track.id}.jpg`, sizes: '96x96', type: 'image/png' },
+          { src: `/img/${track.id}.jpg`, sizes: '128x128', type: 'image/png' },
+          { src: `/img/${track.id}.jpg`, sizes: '192x192', type: 'image/png' },
+          { src: `/img/${track.id}.jpg`, sizes: '256x256', type: 'image/png' },
+          { src: `/img/${track.id}.jpg`, sizes: '384x384', type: 'image/png' },
+          { src: `/img/${track.id}.jpg`, sizes: '512x512', type: 'image/png' },
+        ],
+      });
     }
-  }, [audioRef, activeTrackIndex]);
 
-  useEffect(() => {
     if (audioRef.current) {
+      if (audioRef.current.src !== `https://dabears.s3.amazonaws.com/${tracksSource[activeTrackIndex].id}.mp3`) {
+        audioRef.current.src = `https://dabears.s3.amazonaws.com/${tracksSource[activeTrackIndex].id}.mp3`;
+      }
+
       if (playbackState === 'playing') {
         navigator.mediaSession.playbackState = 'playing';
         audioRef.current
@@ -53,7 +54,7 @@ const Player: FC<PlayerProps> = () => {
         audioRef.current.pause();
       }
     }
-  }, [playbackState, activeTrackIndex]);
+  }, [audioRef, activeTrackIndex, playbackState]);
 
   const playHandler = useCallback(() => dispatch(play()), [dispatch]);
   const pauseHandler = useCallback(() => dispatch(pause()), [dispatch]);
@@ -64,9 +65,9 @@ const Player: FC<PlayerProps> = () => {
       audioRef.current.addEventListener('play', playHandler);
       audioRef.current.addEventListener('pause', pauseHandler);
       audioRef.current.addEventListener('ended', nextTrackHandler);
-      navigator.mediaSession.setActionHandler('play', () => playHandler);
-      navigator.mediaSession.setActionHandler('pause', () => pauseHandler);
-      navigator.mediaSession.setActionHandler('nexttrack', nextTrackHandler);
+      navigator.mediaSession.setActionHandler('play', () => dispatch(play()));
+      navigator.mediaSession.setActionHandler('pause', () => dispatch(pause()));
+      navigator.mediaSession.setActionHandler('nexttrack', () => dispatch(nextTrack()));
       navigator.mediaSession.setActionHandler('previoustrack', () => dispatch(prevTrack()));
       navigator.mediaSession.setActionHandler('seekto', (event) => {
         if (event.fastSeek && 'fastSeek' in audioRef.current!) {
