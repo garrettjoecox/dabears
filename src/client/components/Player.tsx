@@ -31,16 +31,6 @@ const Player: FC<PlayerProps> = () => {
     });
     if (audioRef.current) {
       audioRef.current.src = `https://dabears.s3.amazonaws.com/${tracksSource[activeTrackIndex].id}.mp3`;
-      audioRef.current
-        ?.play()
-        .then(() => {
-          navigator.mediaSession.setPositionState({
-            duration: audioRef.current?.duration,
-            playbackRate: audioRef.current?.playbackRate,
-            position: audioRef.current?.currentTime,
-          });
-        })
-        .catch((error) => console.log(error));
     }
   }, [audioRef, activeTrackIndex]);
 
@@ -48,13 +38,22 @@ const Player: FC<PlayerProps> = () => {
     if (audioRef.current) {
       if (playbackState === 'playing') {
         navigator.mediaSession.playbackState = 'playing';
-        audioRef.current.play();
+        audioRef.current
+          .play()
+          .then(() => {
+            navigator.mediaSession.setPositionState({
+              duration: audioRef.current?.duration,
+              playbackRate: audioRef.current?.playbackRate,
+              position: audioRef.current?.currentTime,
+            });
+          })
+          .catch((error) => console.log(error));
       } else {
         navigator.mediaSession.playbackState = 'paused';
         audioRef.current.pause();
       }
     }
-  }, [playbackState]);
+  }, [playbackState, activeTrackIndex]);
 
   useEffect(() => {
     if (audioRef.current) {

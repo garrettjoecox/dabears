@@ -1,5 +1,5 @@
 import { AppDispatch, AppState } from '@/client/state';
-import { playTrack } from '@/client/state/playerSlice';
+import { pause, play, playTrack } from '@/client/state/playerSlice';
 import { Box, Button, Center, Heading, Text, Wrap, WrapItem } from '@chakra-ui/react';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -27,9 +27,17 @@ export default function Home({ tracks }: HomeProps) {
 
   const onTrackPlay = useCallback(
     (t: number) => {
-      dispatch(playTrack(t));
+      if (activeTrackIndex === t) {
+        if (playbackState === 'playing') {
+          dispatch(pause());
+        } else {
+          dispatch(play());
+        }
+      } else {
+        dispatch(playTrack(t));
+      }
     },
-    [dispatch]
+    [activeTrackIndex, playbackState, dispatch]
   );
 
   return (
