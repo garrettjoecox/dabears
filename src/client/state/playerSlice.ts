@@ -30,9 +30,11 @@ const playerSlice = createSlice({
     },
     nextTrack: (state) => {
       state.track = (state.track + 1) % tracksSource.length;
+      state.playbackState = 'playing';
     },
     prevTrack: (state) => {
       state.track = (state.track - 1 + tracksSource.length) % tracksSource.length;
+      state.playbackState = 'playing';
     },
   },
   initialState: initialPlayerContextState,

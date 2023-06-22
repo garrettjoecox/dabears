@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react';
-import { FC, useEffect, useRef } from 'react';
+import { FC, useCallback, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import tracksSource from '../../../public/tracks.json';
 import { AppDispatch, AppState } from '../state';
@@ -41,6 +41,8 @@ const Player: FC<PlayerProps> = () => {
         audioRef.current
           .play()
           .then(() => {
+            let track = tracksSource[activeTrackIndex];
+            console.log(track.id, 'duration:', audioRef.current?.duration);
             navigator.mediaSession.setPositionState({
               duration: audioRef.current?.duration,
               playbackRate: audioRef.current?.playbackRate,
@@ -55,29 +57,19 @@ const Player: FC<PlayerProps> = () => {
     }
   }, [playbackState, activeTrackIndex]);
 
+  const playHandler = useCallback(() => dispatch(play()), [dispatch]);
+  const pauseHandler = useCallback(() => dispatch(pause()), [dispatch]);
+  const nextTrackHandler = useCallback(() => dispatch(nextTrack()), [dispatch]);
+
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.addEventListener('play', () => {
-        dispatch(play());
-      });
-      audioRef.current.addEventListener('pause', () => {
-        dispatch(pause());
-      });
-      audioRef.current.addEventListener('ended', () => {
-        dispatch(nextTrack());
-      });
-      navigator.mediaSession.setActionHandler('play', () => {
-        dispatch(play());
-      });
-      navigator.mediaSession.setActionHandler('pause', () => {
-        dispatch(pause());
-      });
-      navigator.mediaSession.setActionHandler('previoustrack', () => {
-        dispatch(prevTrack());
-      });
-      navigator.mediaSession.setActionHandler('nexttrack', () => {
-        dispatch(nextTrack());
-      });
+      audioRef.current.addEventListener('play', playHandler);
+      audioRef.current.addEventListener('pause', pauseHandler);
+      audioRef.current.addEventListener('ended', nextTrackHandler);
+      navigator.mediaSession.setActionHandler('play', () => playHandler);
+      navigator.mediaSession.setActionHandler('pause', () => pauseHandler);
+      navigator.mediaSession.setActionHandler('nexttrack', nextTrackHandler);
+      navigator.mediaSession.setActionHandler('previoustrack', () => dispatch(prevTrack()));
       navigator.mediaSession.setActionHandler('seekto', (event) => {
         if (event.fastSeek && 'fastSeek' in audioRef.current!) {
           audioRef.current.fastSeek(event.seekTime!);
@@ -86,7 +78,15 @@ const Player: FC<PlayerProps> = () => {
         audioRef.current!.currentTime = event.seekTime!;
       });
     }
-  }, [audioRef, dispatch]);
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.removeEventListener('play', playHandler);
+        audioRef.current.removeEventListener('pause', pauseHandler);
+        audioRef.current.removeEventListener('ended', nextTrackHandler);
+      }
+    };
+  }, [dispatch, nextTrackHandler, pauseHandler, playHandler]);
 
   return (
     <Box w="100%" position="fixed" bottom="env(safe-area-inset-bottom)" bg="gray.900">
